@@ -11,4 +11,6 @@ class Post(models.Model):
     date_pub = models.DateTimeField(default=timezone.now)
 
 
+    def __str__(self):
+        return self.title
 # Create your models here.

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'index.css' %}"> {% endblock %}
+
+{% block content %}
+<div class="row">
+        {% for item in post %}
+        <div class="col-3">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{item.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">{{ item.discription }}</p>
+                    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                </div>
+            </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+{% endblock %}  

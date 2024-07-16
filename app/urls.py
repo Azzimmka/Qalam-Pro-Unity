@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import base
+from .views import index
 
 urlpatterns = [
-    path('', base, name='base'),  # Определяем маршрут для базового представления
+    path('uz', index, name='index'),  # Определяем маршрут для базового представления
 ]
