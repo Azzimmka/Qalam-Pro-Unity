@@ -9,11 +9,12 @@
         <div class="col-3">
 
             <div class="card" style="width: 18rem;">
-                <img src="{{item.image.url}}" class="card-img-top" alt="...">
+                <img src="{{item.image.url}}" class="card-img-top" alt="..." style="height: 300px;">
                 <div class="card-body">
                     <h5 class="card-title">{{ item.title }}</h5>
                     <p class="card-text">{{ item.discription }}</p>
-                    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                    <!-- <a href="#" class="btn btn-primary">Перейти куда-нибудь</a> -->
+                    <b>{{ item.date_pub | date:"M d, Y" }}</b>
                 </div>
             </div>
         </div>
