@@ -1,11 +1,12 @@
-{% extends 'base.html' %}
-{% load static %}
 
-{% block css %} <link rel="stylesheet" href="{% static 'index.css' %}"> {% endblock %}
+{% extends 'base.html' %}
+
 
 {% block content %}
-<div class="row">
-        {% for item in post %}
+
+<div class="container">
+    <div class="row">
+        {% for item in categories.categories.all %}
         <div class="col-3">
 
             <div class="card" style="width: 18rem;">
@@ -20,4 +21,6 @@
         
         {% endfor %}
     </div>
-{% endblock %}  
+</div>
+
+{% endblock %}
