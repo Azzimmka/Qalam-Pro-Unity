@@ -1,11 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
-
-{% block css %} <link rel="stylesheet" href="{% static 'index.css' %}"> {% endblock %}
-
 {% block content %}
 <div class="row">
-    {% for item in posts %}
+    {% for item in search_obj %}
     <div class="col-3">
         <a href="{% url 'post_detail_url' slug=item.slug %}" style="text-decoration: none;">
 

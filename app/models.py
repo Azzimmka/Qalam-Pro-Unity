@@ -16,6 +16,7 @@ class Post(models.Model):
     slug = models.SlugField(unique=True)
     image = models.ImageField()
     description = models.TextField()
+    full_info = models.TextField(null=True)
     date_pub = models.DateTimeField(default=timezone.now)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, related_name='categories')
 
